@@ -1,0 +1,88 @@
+{
+    "model": {
+        "id": "FireProtection",
+        "hardware": [
+            {
+                "device": [
+                    {
+                        "id": "Smoke Detection",
+                        "type": "ALM"
+                        "description": ["The ALM device using EL6002 RS232 port"],
+                        "setup": [
+                            {
+                                "param": [
+                                    {
+                                        "id": "port",
+                                        "value": "ECAT"
+                                    },
+                                    {
+                                        "id": "amsAddress",
+                                        "value": "5.8.44.232.1.1"
+                                    },
+                                    {
+                                        "id": "device1",
+                                        "value": "B8:03:01:19:00:44:ff:80:00:19:00:00:00"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": "TIC",
+                        "type": "TIC"
+                        "description": ["Turbine Industrial Controller"],
+                        "setup": [
+                            {
+                                "param": [
+                                    {
+                                        "id": "amsAddress",
+                                        "value": "5.8.44.232.1.1"
+                                    },
+                                    {
+                                        "id": "amsPort",
+                                        "value": "301"
+                                    },
+                                    {
+                                        "id": "adsCanFPCCommands",
+                                        "value": "SIMULATOR:CANFPCCOMMANDS:FALSE:BYTE"
+                                    },
+                                    {
+                                        "id": "adsSmokeNotDetected",
+                                        "value": "SIMULATOR:SMOKENOTDETECTED:TRUE:BOOL"
+                                    },
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": "FPCExterior",
+                        "type": "FPCExterior"
+                        "description": ["Handling external FPC attributes"],
+                        "setup": [
+                            {
+                                "param": [
+                                    {
+                                        "id": "amsAddress",
+                                        "value": "5.8.44.232.1.1"
+                                    },
+                                    {
+                                        "id": "amsPort",
+                                        "value": "301"
+                                    },
+                                    {
+                                        "id": "adsPLCPower",
+                                        "value": "SIMULATOR:PLCPOWER:FALSE:BOOL"
+                                    },
+                                    {
+                                        "id": "plcPowerOn",
+                                        "value": "1"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

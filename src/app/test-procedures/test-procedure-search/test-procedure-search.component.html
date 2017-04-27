@@ -1,0 +1,9 @@
+<div id="search-component">
+    <h4>testprocedure search</h4>
+    <input #searchBox id="search-box" (keyup)="search(searchBox.value)" placeholder="🔎" />
+    <div>
+        <div *ngFor="let testprocedure of testprocedures | async" (click)="gotoDetail(testprocedure)" class="search-result">
+            {{testprocedure.name}}
+        </div>
+    </div>
+</div>

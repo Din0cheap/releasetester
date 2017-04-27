@@ -1,0 +1,385 @@
+%% Package use list
+%\usepackage{lmodern}
+%\renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is to be sans serif
+
+\usepackage{lmodern}
+\renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is to be sans serif
+\usepackage[T1]{fontenc}
+\usepackage[british]{babel}
+\usepackage{inputenc}
+\usepackage{a4}
+\usepackage{tabularx}
+\usepackage{float}
+\usepackage{varioref}
+\usepackage{graphicx}
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb}
+\usepackage{amsxtra}
+\usepackage{sistyle}
+\usepackage[table]{xcolor}  
+\usepackage{url}
+\usepackage{etoolbox}
+
+\definecolor{RDblue}{RGB}{16,103,136}
+\definecolor{RDgreyD}{RGB}{228,226,176}
+\definecolor{RDgreyL}{RGB}{239,236,201}
+\definecolor{RDyellow}{RGB}{255,255,0}
+  \SIdefaultNfam{\mathnormal}
+  \SIdefaultMfam{\mathrm}
+%  \SIproductsign{\cdot}
+\usepackage{longtable}
+\usepackage{bm}
+
+\usepackage{graphics,graphicx}
+\usepackage{epic,eepic}
+\usepackage{color}
+\usepackage{subfigure}
+%\usepackage{verbatim}
+% % % % % % % % % % % % % % % % \usepackage{multibbl}  does not work with bibtex
+\usepackage{fancyhdr}
+\usepackage{frontpage}
+\usepackage{moreverb}
+\usepackage{lscape}
+\usepackage{pdflscape}
+\usepackage[bf,small]{caption} % cosumize figure and table captions
+\usepackage{rotating}
+\usepackage{lscape}
+\usepackage{placeins}
+\usepackage{multirow}
+\usepackage{rotating}
+\usepackage{cite}
+%\usepackage[framed,numbered,autolinebreaks,useliterate]{mcode}
+\usepackage[nodayofweek]{datetime}
+%\usepackage[vcentering,dvips]{geometry}
+%\geometry{papersize={165mm,235mm}}
+
+%\usepackage[paperwidth=165mm, paperheight=235mm]{geometry}
+\usepackage{epstopdf}
+\usepackage{enumitem}
+\usepackage{listings}
+\usepackage{framed}
+
+\usepackage{multirow}
+\usepackage{mwe}
+\usepackage{graphbox}
+
+\renewcommand{\captionfont}{\it}
+
+%% Fine tune the margins
+\addtolength{\oddsidemargin}{-0.65\marginparwidth}
+\addtolength{\evensidemargin}{-0.25\marginparwidth}
+\setlength{\textwidth}{12.4cm}
+
+\setlength{\textheight}{20cm}
+\setlength{\headheight}{60pt}
+\setlength{\marginparwidth}{0pt}
+\setlength{\captionmargin}{12pt}
+\setlength{\abovecaptionskip}{5pt} %default is 10pt
+\addtolength{\evensidemargin}{-1cm} 
+
+%% For printing crop-marks in a final a4 version. This is not used
+%% in the final 170x240mm-sized version to be delivered to Ponsen & Looijen.
+%\usepackage[a4,cam,center]{crop}
+%\crop[font=\upshape\mdseries\small\textsf]
+
+
+%% Fancy headings & chapters
+\renewcommand{\footrulewidth}{0.4pt}
+%\usepackage[Lenny]{fncychap}
+\addtolength{\headwidth}{\marginparsep}
+\addtolength{\headwidth}{\marginparwidth}
+%\renewcommand{\chaptermark}[1]{\markboth{\thechapter\ #1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+
+
+
+\definecolor{headc}{rgb}{0.15,0.45,0.75}
+%\lhead[\begin{tabular}{|l}\hline \fancyplain{}{ \small Page:\thepage/\pageref{lastpage}} \\ \hline a \end{tabular}]%
+%{ \fancyplain{}{\begin{tabular}{l|}\hline \small Wind load simulator for function and durability test of wind turbine drive trains\\ \hline asdasd\end{tabular}}}%
+%\rhead[\fancyplain{}{\small Wind load simulator for function and durability test of wind turbine drive trains}]%
+%{\fancyplain{}{\small\thepage/\pageref{lastpage}}}%
+\rhead{\color{headc}\begin{tabularx}{400pt}{|lXl|} \hline  &{ \tiny Memo }& {\small
+ Page:\thepage/\pageref{lastpage}} \\ \hline { \tiny DOCUMENT REVISION } & { \tiny  Subtask Title: }& { \tiny CLASSIFICATION: } \\  
+{ \tiny 00 } & { \tiny  \FileName }& { \tiny CONFIDENTIAL } 
+\\ \hline  \end{tabularx} }
+\lhead{\begin{tabularx}{400pt}{|lXl|} \hline  &{ \tiny Memo }& {\small
+ Page:\thepage/\pageref{lastpage}} \\ \hline { \tiny DOCUMENT REVISION } & { \tiny  Subtask Title: }& { \tiny CLASSIFICATION: } \\ 
+{ \tiny 00 } & { \tiny  \FileName }& { \tiny CONFIDENTIAL } 
+\\ \hline  \end{tabularx} }
+
+%\rhead{\begin{tabularx}{400pt}{|lXl|} \hline {\small
+% Page:\thepage/\pageref{lastpage}} &{ \footnotesize Wind load simulator for function and durability test of wind turbine drive trains }& \\ asd  & Subtask &  \\ \hline  \end{tabularx} }
+
+\cfoot{\color{headc} \begin{tabularx}{400pt}{X}   \hline \tiny Copyright - Contains information proprietary to Project Partners not to be disclosed to third parties without Partners prior written permission.\end{tabularx} }
+\pagestyle{empty}
+
+
+%% Commands to change the page numbering
+\newcommand{\pagenumberingroman}{\pageheadfoot{roman}}
+\newcommand{\pagenumberingarabic}{\pageheadfoot{arabic}}
+
+%% Units in equations
+\makeatletter
+\newcommand*{\ufrmt}[1]{[\,\SI{}{#1}\,]\quad}
+\newcommand*{\eqfrmt}[1]{(\ignorespaces#1\unskip\@@italiccorr)}
+\newcommand*{\equnit}{}
+\newcommand*{\eqnum}{}
+\newcommand*{\utag}[1]{%
+   \refstepcounter{equation}%
+   \gdef\equnit{\ufrmt{#1}\gdef\equnit{}}%
+   \gdef\eqnum{%
+      \maketag@@@{\eqfrmt{\theequation}}%
+      \toks@\@xp{\p@equation\theequation}%
+      \xdef\eqnum{\the\toks@}}%
+   \tag*{\equnit\eqnum}}
+\newcommand*{\utagnn}[1]{%
+   \refstepcounter{equation}%
+   \gdef\equnit{\ufrmt{#1}\gdef\equnit{}}%
+   \gdef\eqnum{%
+      \maketag@@@{\eqfrmt{\theequation}}%
+      \toks@\@xp{\p@equation\theequation}%
+      \xdef\eqnum{\the\toks@}}%
+   \tag*{\equnit}}
+\renewcommand*{\tagform@}[1]{\maketag@@@{\eqfrmt{#1}}}
+\makeatother
+
+% General added
+\newcommand{\celcius}{^{\circ}\text{C}}
+\newcommand{\PBS}[1]{\let\temp=\\#1\let\\=\temp}
+\newcommand{\sm}[1]{_\text{{#1}}}
+\newcommand{\unit}[1]{\;\!\text{#1}}
+\newcommand{\unitf}[2]{\;\!\frac{\text{#1}}{\text{#2}}}
+\newcommand{\pin}[1]{${\text{#1}}$}
+\newcommand{\pininv}[1]{$\overline{\text{#1}}$}
+
+% Math:
+\newcommand{\mt}{\mspace{-18.0mu} \frac{}{}}
+\renewcommand{\Re}[0]{\mathbb{R}}    													% used for vectors
+\newcommand{\is}[1]{\text{\textit{#1}}}							   				% used for symbols	
+\newcommand{\eqinfo}[1]{$\frac{}{}  \	\	\	 \	 \  \frac{}{}$\begin{tabularx}{450pt}{ l l} #1 \end{tabularx}}
+\renewcommand{\vec}[1]{\mbox{\boldmath$#1$}}    							% used for vectors
+\newcommand{\dvec}[1]{\dot{ {\mbox{\boldmath$#1$}} }}    			% used for dot vectors
+\newcommand{\uvec}[1]{\hat{\vec{#1}}}                  				% used for unit vectors
+\newcommand{\dcm}[3]{\text{${^{#1}_{#2}\!\text{\textit{\textbf{#3}}}}$}{\:\!}} % used for transformation matrix
+\newcommand{\vecf}[2]{\text{${^{#2}\!\vec{#1}}$}}      				% used for vectors with frame
+\newcommand{\uvecf}[2]{\text{${^{#2}\!\hat{\vec{#1}}}$}} 			% used for unit vectors with frame
+\newcommand{\ematrix}[1]{\begin{bmatrix} #1 \end{bmatrix}}  	% Ex. \matrix{a11 & a12 & a13 \\ a21 & a22 & a23}
+\renewcommand{\matrix}[1]{\begin{pmatrix} #1 \end{pmatrix}} 	% Ex. \matrix{a11 & a12 & a13 \\ a21 & a22 & a23}
+\newcommand{\inds}[2]{\mspace{{#2}} {#1} \mspace{{#2}} \frac{}{}}
+\newcommand{\smatrix}[1]{\left[ \begin{smallmatrix} #1  \end{smallmatrix}\right]}
+\newcommand{\lvecf}[3]{\vecf{#1}{#2}_{#3}}   									% used for vectors
+\newcommand{\luvecf}[3]{\text{${^{#2}\!\hat{\vec{#1}}_{#3}}$}} 
+\newcommand{\lvec}[2]{\text{${\vec{#1}_{#2}}$}}
+\newcommand{\linkframe}[1]{\{\textit{#1}\}}	
+\newcommand{\ddt}[1]{\frac{\text{d}#1}{\text{d}t}}
+\newcommand{\tp}[0]{^\text{\textsc{t}}}					% transpose
+\newcommand{\rani}[0]{_{\bot}}	
+\newcommand{\E}[1]{\cdot10^{#1}}
+\newcommand{\Tmat}[2]{^{\text{#1}}_{\text{#2}}\!\vec{T}}
+\newcommand{\Rmat}[2]{^{\text{#1}}_{\text{#2}}\!\!\vec{R}}
+% Other
+\newcommand{\matlab}{\text{{\textsc{Matlab}}}\normalsize{ }}
+\newcommand{\simulink}{\text{\textsc{Simulink}}\normalsize{ }}
+\newcommand{\eq}[1]{$\text{Eq.}\:\text{\eqref{#1}}$}
+\newcommand{\fig}[1]{$\text{Fig.}\:\text{\ref{#1}}$}
+\newcommand{\tab}[1]{$\text{Tab.}\:\text{\ref{#1}}$}
+\newcommand{\ch}[1]{$\text{Ch.}\:\text{\ref{#1}}$}
+\newcommand{\app}[1]{$\text{App.}\:\text{\ref{#1}}$}
+\newcommand{\Sec}[1]{$\text{Sec.}\:\text{\ref{#1}}$}
+\newcommand{\clearemptydoublepage}{\newpage{\pagestyle{empty}\cleardoublepage}}
+\newcommand{\indentt}{\hskip 1cm }
+\newcommand{\colorm}[2]{\color{#1}{#2}\color{black}}						%used for coloured brackets
+\newcommand{\Bigblue}[1]{\color{blue}\Big{#1}\color{black}}
+\newcommand{\biggblue}[1]{\color{blue}\bigg{#1}\color{black}}
+\newcommand{\Bigred}[1]{\color{red}\Big{#1}\color{black}}
+\newcommand{\biggred}[1]{\color{red}\bigg{#1}\color{black}}
+
+\newenvironment{codelisting}
+{\begin{list}{}{\setlength{\leftmargin}{1em}}\item\scriptsize\bfseries}
+{\end{list}}
+
+%% Farver
+\definecolor{state_var}{rgb}{0.65,0.08,0}
+\definecolor{input_var}{rgb}{0,0.08,0.75}
+\newcommand{\state}[1]{\textcolor{state_var}{#1}}
+\newcommand{\invar}[1]{\textcolor{input_var}{#1}}
+
+%% Todo list
+\newcommand{\todotext}[1]{ {\bf{\tiny [* #1 *]}}
+  \addcontentsline{lotodo}{todo}{#1}
+}
+\newcommand{\todomargin}[1]{\marginpar{\raggedright\tiny{\textbf{#1}}
+  \addcontentsline{lotodo}{todo}{#1}
+}}
+\newcommand{\todo}{\todomargin}
+\makeatletter
+\newcommand{\listoftodos}{\chapter*{List of TODOS}\@starttoc{lotodo}}
+\newcommand{\l@lotodo}[2]{\par #2:{\itshape #1},}
+\makeatother
+
+%% Bibliography and appended documents
+%\newbibliography{ref}
+%\newbibliography{ap}
+
+%% Settings for table of contents
+\setcounter{tocdepth}{1} % Only include parts, chapters and sections
+
+\makeatletter
+\renewcommand\tableofcontents{%
+    \if@twocolumn
+      \@restonecoltrue\onecolumn
+    \else
+      \@restonecolfalse
+    \fi
+    \chapter*{\vskip -4 cm\contentsname
+        \@mkboth{%
+           \MakeUppercase\contentsname}{\MakeUppercase\contentsname}\vskip -2 cm}%
+    \@starttoc{toc}%
+    \if@restonecol\twocolumn\fi
+    }
+
+\renewcommand*\l@part[2]{%
+  \ifnum \c@tocdepth >-2\relax
+    \addpenalty{-\@highpenalty}%
+    \addvspace{2.25em \@plus\p@}%
+    \setlength\@tempdima{3em}%
+    \begingroup
+      \parindent \z@ \rightskip \@pnumwidth
+      \parfillskip -\@pnumwidth
+      {\leavevmode
+       \large \bfseries #1\hfil \hb@xt@\@pnumwidth{\hss #2}\hrule}\par
+       \nobreak
+         \global\@nobreaktrue
+         \everypar{\global\@nobreakfalse\everypar{}}%
+    \endgroup
+   \fi}
+%\renewcommand*\l@chapter[2]{%
+ % \ifnum \c@tocdepth >\m@ne
+ %   \addpenalty{-\@highpenalty}%
+ %   \vskip 1.2em \@plus\p@
+ %   \hskip 1.5em
+ %   \setlength\@tempdima{1.5em}%
+ %   \begingroup
+ %     \parindent \z@ \rightskip \@pnumwidth
+ %     \parfillskip -\@pnumwidth
+ %     \leavevmode \bfseries
+ %     \advance\leftskip\@tempdima
+ %     \hskip -\leftskip
+ %     #1\nobreak\hfil \nobreak\hb@xt@\@pnumwidth{\hss #2}\par
+%      \penalty\@highpenalty
+%    \endgroup
+%  \fi
+%}
+\renewcommand{\l@section}{\@dottedtocline{1}{3em}{2.3em}}
+\renewcommand{\l@subsection}{\@dottedtocline{2}{5.3em}{3.2em}}
+
+%% Fine tune the margins within sections
+\renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
+  {-0.25ex\@plus -1ex \@minus -.2ex}%
+  {0.5ex \@plus .2ex}%
+  {\normalfont\normalsize\bfseries}}
+\renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
+                                     {-1.25ex\@plus -1ex \@minus -.2ex}%
+                                     {1.0ex \@plus .2ex}%
+                                     {\normalfont\large\bfseries}}
+\renewcommand\part{%
+  \if@openright
+    \cleardoublepage
+  \else
+    \clearpage
+  \fi
+  \thispagestyle{empty}%
+  \if@twocolumn
+    \onecolumn
+    \@tempswatrue
+  \else
+    \@tempswafalse
+  \fi
+  \null\vfil
+  \secdef\@part\@spart}
+                                                                                    
+\def\@part[#1]#2{%
+    \ifnum \c@secnumdepth >-2\relax
+      \refstepcounter{part}%
+      \addcontentsline{toc}{part}{\thepart\hspace{1em}#1}%
+    \else
+      \addcontentsline{toc}{part}{#1}%
+    \fi
+    \markboth{}{}%
+    {\centering
+     \interlinepenalty \@M
+     \normalfont
+     \ifnum \c@secnumdepth >-2\relax
+       \huge\bfseries \partname\nobreakspace\thepart
+       \par
+       \vskip 20\p@
+     \fi
+     \Huge \bfseries #2\par}%
+    \@endpart}
+\def\@spart#1{%
+    {\centering
+     \interlinepenalty \@M
+     \normalfont
+     \Huge \bfseries #1\par}%
+    \@endpart}
+\def\@endpart{\vfil
+              \if@twoside
+               \if@openright
+                \null
+                \thispagestyle{empty}%
+               \fi
+              \fi
+              \if@tempswa
+                \twocolumn
+              \fi}
+\makeatother
+
+\begin{comment}
+% Hyperref
+\DeclareGraphicsExtensions{.eps}   % standard extension for included graphics
+\usepackage[ps2pdf,a4paper]{hyperref}
+
+%\definecolor{hyper_linkcolor}{rgb}{0,0.08,0.45}%
+%\definecolor{hyper_citecolor}{rgb}{0,0.5,0}%
+\definecolor{hyper_linkcolor}{rgb}{0,0,0}%
+\definecolor{hyper_citecolor}{rgb}{0,0,0}%
+\hypersetup{
+%    bookmarks=true,                                                      % show bookmarks bar?
+    bookmarksnumbered=true,                                              % sectrion numbers in bookmarks?
+    unicode=false,                                                       % non-Latin characters in Acrobat’s bookmarks
+    pdftoolbar=true,                                                     % show Acrobat’s toolbar?
+    pdfmenubar=true,                                                     % show Acrobat’s menu?
+    pdffitwindow=true,                                                   % page fit to window when opened
+    pdftitle={Multivariable Control of a Teletruck},                     % title
+    pdfauthor={Rico H. Hansen, Mads S. Jensen and Asger M. Iversen},     % author
+    pdfsubject={Modelling and Control of MIMO systems},                  % subject of the document
+    pdfnewwindow=true,                                                   % links in new window
+    pdfkeywords={control,hydraulics,MIMO,LPV,Gain-sheduling},            % list of keywords
+    colorlinks=true,                                                     % false: boxed links; true: colored links
+    linkcolor=hyper_linkcolor,                                           % color of internal links
+    citecolor=hyper_citecolor,                                           % color of links to bibliography
+    filecolor=magenta,                                                   % color of file links
+    urlcolor=cyan,                                                       % color of external links
+    hypertexnames=false,                                                 % needed for correct links to figures !!!
+    breaklinks=true                                                      % break links if exceeding a single line
+}%
+
+
+\usepackage{minitoc}
+\setcounter{parttocdepth}{1}% Only include parts, chapters and sections
+\setcounter{minitocdepth}{2}% Only include parts, chapters and sections
+\renewcommand\beforeparttoc{%
+}
+
+\renewcommand\afterparttoc{%
+}
+\end{comment}
+%\usepackage[all]{hypcap}%  Since hyperref points to the caption created within the float environment, which is always set below a figure or table, the figure or table itself will not be visible. This package is surpose to fix that.
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "report"
+%%% End: 

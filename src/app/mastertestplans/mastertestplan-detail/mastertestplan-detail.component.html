@@ -1,0 +1,35 @@
+<div *ngIf="mastertestplan">
+    <h2>{{mastertestplan.name}} details!</h2>
+
+    <table>
+        <tr>
+            <th>id: </th>
+            <th>{{mastertestplan.id}}</th>
+        </tr>
+        <tr>
+            <th>name:</th>
+            <th><input [(ngModel)]="mastertestplan.name" placeholder="name"></th>
+        </tr>
+        <tr>
+            <th>description:</th>
+            <th><input [(ngModel)]="mastertestplan.description" placeholder="description"></th>
+        </tr>
+        <tr>
+            <th>goal:</th>
+            <th><input [(ngModel)]="mastertestplan.goal" placeholder="goal"></th>
+        </tr>
+        <tr>
+            <th>time:</th>
+            <th><input [(ngModel)]="mastertestplan.time" placeholder="time"><label>s</label></th>
+        </tr>
+    </table>
+
+    <button (click)="save()">Save</button>
+<--
+    <div *ngIf="leveltestplans">
+        <leveltestplan [leveltestplans]="leveltestplans"></leveltestplan>
+    </div>
+    <button (click)="goBack()">Back</button>-->
+</div>
+
+

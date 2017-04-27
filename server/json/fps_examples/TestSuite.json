@@ -1,0 +1,175 @@
+{
+    "simulationsuite": {
+        "description": ["Generic Smoke Detection Test Suite"],
+        "simulation": [
+            {
+                "id": "Scenario 1-System Start-up (2MW Mk8/9Detection)",
+                "cancombine": "false",
+                "description": "Scenario 1-System Start-up with no errors (2MW Detection)",
+                "validmodels": [],
+                "setup": [],
+                "run": [
+                    {
+                        "assertions": [
+                            {
+                                "assert": [
+                                    {
+                                        "time": "00:00:00",
+                                        "device": "TIC",
+                                        "property": "fpcSystemOK",
+                                        "relation": "equals",
+                                        "value": "1",
+                                        "inreport": "true"
+                                    },
+                                    {
+                                        "time": "00:00:01",
+                                        "device": "TIC",
+                                        "property": "fpcSystemUpRunning",
+                                        "relation": "equals",
+                                        "value": "1",
+                                        "inreport": "true"
+                                    }
+                                    ]
+                            }
+                        ]
+                    }
+                ],
+                "shutdown": ["\n            "]
+            },
+            {
+                "id": "Scenario 26 - Heat without smoke",
+                "cancombine": "true",
+                "description": "Scenario 26 - Heat without smoke",
+                "validmodels": [],
+                "setup": [],
+                "run": [
+                    {
+                        "messages": [
+                            {
+                                "message": [
+                                    {
+                                        "time": "00:00:02",
+                                        "device": "Smoke Detection",
+                                        "operation": "SetDirectHeatValue",
+                                        "param": [
+                                            {
+                                                "id": "LoopId",
+                                                "value": "0"
+                                            },
+                                            {
+                                                "id": "DeviceAddress",
+                                                "value": "10"
+                                            },
+                                            {
+                                                "id": "HeatValue",
+                                                "value": "25"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "time": "00:00:30",
+                                        "device": "Smoke Detection",
+                                        "operation": "SetDirectHeatValue",
+                                        "param": [
+                                            {
+                                                "id": "LoopId",
+                                                "value": "0"
+                                            },
+                                            {
+                                                "id": "DeviceAddress",
+                                                "value": "10"
+                                            },
+                                            {
+                                                "id": "HeatValue",
+                                                "value": "97"
+                                             }
+                                                ]
+                                    }
+                                ]
+                            }
+                        ],
+                        "assertions": [
+                            {
+                                "assert": [
+                                    {
+                                        "time": "00:00:05",
+                                        "device": "TIC",
+                                        "property": "fpcSmokeNotDetected",
+                                        "relation": "equals",
+                                        "value": "1",
+                                        "inreport": "true"
+                                    },
+                                    {
+                                        "time": "00:00:05",
+                                        "device": "TIC",
+                                        "property": "fpcSystemOK",
+                                        "relation": "equals",
+                                        "value": "1",
+                                        "inreport": "false"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "shutdown": []
+      }
+    ],
+        "iteration": [
+            {
+                "name": "Duration All",
+                "description": "All tests run for 12 hours",
+                "validmodels": [],
+                "iterate": [
+                    {
+                        "duration": "12:00:00"
+                    }
+                ]
+            },
+            {
+                "name": "LoopsAllStrict",
+                "description": "Continous 2",
+                "validmodels": [],
+                "iterate": [
+                    {
+                        "loops": "25",
+                        "sequence": "strict"
+                    }
+                ]
+            },
+            {
+                "name": "v. 2.0.0 HW Reduced",
+                "description": "Test sequence for reduced HW - Arc no longer relevant."
+                "validmodels": [],
+                "iterate": [
+                    {
+                        "loops": "17",
+                        "sequence": "strict",
+                        "include": [
+                            {
+                                "id": "Scenario 4-Power Down or Grid Loss"
+                            },
+                            {
+                                "id": "Scenario 6-Fire in the making-Smoke event"
+                            },
+                            {
+                                "id": "Scenario 7-Periodic Maintenance - No ARC"
+                            }
+                            ]
+                    }
+                ]
+            },
+            {
+                "name": "LoopsSpecifik",
+                "description": "Continous 4",
+                "validmodels": [],
+                "iterate": [
+                    {
+                        "loops": "30",
+                        "sequence": "strict"
+                    }
+                    ]
+            }
+        ]
+    }
+}

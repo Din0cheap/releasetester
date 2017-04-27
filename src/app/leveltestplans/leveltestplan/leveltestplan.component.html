@@ -1,0 +1,19 @@
+<h2>my leveltestplans</h2>
+<div>
+    <label>level testplans</label> <input #leveltestplanName/>
+    <button (click)="add(leveltestplanName.value); leveltestplanName.value=''">add</button>
+</div>
+<ul class="component">
+    <li *ngFor="let leveltestplan of leveltestplans" [class.selected]="leveltestplan === selectedLeveltestplan"  (click)="onSelect(leveltestplan)">
+        <span class="badge">{{leveltestplan.id}}</span>
+        <span>{{leveltestplan.name}}</span>
+    </li>
+</ul>
+<div *ngIf="selectedLeveltestplan" class="subcomponent">
+    <h3>
+        {{selectedLeveltestplan.name | uppercase}}
+    </h3>
+    test procedures: {{testprocedureCount}}
+    <button (click)="gotoDetail()">edit</button>
+    <button class="delete" (click)="delete(selectedLeveltestplan); $event.stopPropagation()">delete</button>
+</div>

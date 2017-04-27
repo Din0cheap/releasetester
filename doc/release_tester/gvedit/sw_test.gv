@@ -1,0 +1,44 @@
+graph G {
+rankdir=LR; 
+
+subgraph clusterA {
+label="industrial LAN"
+
+subgraph clusterB {
+label="PLC"
+    controller ;
+}
+subgraph clusterC {
+label="proxy host"
+    testProxy ;
+testFramework;
+testLibrary;
+}
+
+subgraph clusterF {
+label="Client"
+    HMI ;
+}
+HMI -- controller
+controller -- testProxy;
+  
+}
+
+subgraph clusterD {
+
+label="SW Tester"
+    
+subgraph clusterE {
+label="services"
+scripting;
+server;
+testPlans;
+testProcedures;
+simulink;   
+  }
+  }
+testProxy -- server
+controller -- simulink
+testProxy -- simulink
+
+}

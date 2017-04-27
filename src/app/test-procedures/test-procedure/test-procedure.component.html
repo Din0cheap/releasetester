@@ -1,0 +1,27 @@
+<div>
+    <h2>my testprocedures</h2>
+    <div>
+        <label>Test-procedure</label> <input #testprocedureName/>
+        <button (click)="add(testprocedureName.value); testprocedureName.value=''">add</button>
+    </div>
+    <div>
+        <test-procedure-search></test-procedure-search>
+    </div>
+    <div class="wrapper">
+        <ul class="component">
+            <li *ngFor="let testprocedure of testprocedures" [class.selected]="testprocedure === selectedTestprocedure" (dblclick)="gotoDetail()"
+                (click)="onSelect(testprocedure)">
+                <span class="badge">{{testprocedure.id}}</span>
+                <span>{{testprocedure.name}}</span>
+            </li>
+        </ul>
+        <div *ngIf="selectedTestprocedure" class="subcomponent">
+            <h3>
+                {{selectedTestprocedure.name | uppercase}}
+            </h3>
+            tests: {{testCount}}
+            <button (click)="gotoDetail()">edit</button>
+            <button class="delete" (click)="delete(selectedTestprocedure); $event.stopPropagation()">delete</button>
+        </div>
+    </div>
+</div>

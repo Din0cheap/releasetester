@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<driver id="TIC" xmlns:tns="http://www.rogd.dk/driver"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://www.rogd.dk/device"
+    xsi:schemaLocation="http://www.rogd.dk/device device.xsd">
+
+    <description>Vestas Turbine Industrial Controller</description>
+
+    <propertytypes>
+        <type name="ADS">
+            <parameter id="task" description="The ADS task identifier" value="0" type="string" />
+            <parameter id="variable" description="The ADS variable identifier" value="1" type="string" />
+            <parameter id="type" description="The ADS type (true is input, false is output)" value="2" type="bool" />
+            <parameter id="size" description="The size of the variable" value="3" type="string" />
+        </type>
+        <type name="CAN">
+            <parameter id="task" description="The ADS task identifier" value="0" type="string" />
+            <parameter id="variable" description="The ADS variable identifier" value="1" type="string" />
+            <parameter id="type" description="The ADS type (true is input, false is output)" value="2" type="bool" />
+            <parameter id="size" description="The size of the variable" value="3" type="string" />
+        </type>
+    </propertytypes>
+
+    <properties>
+        <parameter id="amsAddress" description="The AMSaddress of the TwinCAT task for the IO variables" type="string"/>
+        <parameter id="amsPort" description="The AMS port of the TwinCAT task" type="uint"/>
+        
+        <parameter id="canAmsAddress" description="The AMSaddress of the TwinCAT CANOpen node" type="string"/>
+        <parameter id="canAmsPort" description="The AMS port of the TwinCAT CANOpen node" type="uint"/>
+
+        <parameter id="adsCanFPCCommands" description="Command bits from TiC to PLC" type="CAN" />
+        <parameter id="canFPCCommands" description="Command bits from TiC to PLC" type="byte" />
+        
+        <parameter id="adsSmokeNotDetected" description="ADS variable for the FPC digital output IO_SFPS_SmokeNotDetected_OUT" type="ADS" />
+        <parameter id="fpcSmokeNotDetected" description="Matches the FPC digital output IO_SFPS_SmokeNotDetected_OUT" type="byte" />
+        
+        <parameter id="adsSystemOK" description="ADS variable for the FPC digital output IO_SFPS_SYSTEM_OK_TC_OUT" type="ADS" />
+        <parameter id="fpcSystemOK" description="Matches the FPC digital output IO_SFPS_SYSTEM_OK_TC_OUT" type="byte" />
+        
+        <parameter id="adsSystemUpRunning" description="ADS variable for the FPC digital output IO_SFPS_SystemUpRunning_OUT" type="ADS" />
+        <parameter id="fpcSystemUpRunning" description="Matches the FPC digital output IO_SFPS_SystemUpRunning_OUT" type="byte" />
+        
+        <parameter id="adsSGNotTripped" description="ADS variable for the FPC digital output IO_SFPS_SG_TRIP_OUT" type="ADS" />
+        <parameter id="fpcSGNotTripped" description="Matches the FPC digital output IO_SFPS_SG_TRIP_OUT" type="byte" />
+
+        <parameter id="adsSGSystemOK" description="ADS variable for the FPC digital output IO_SFPS_SG_TRIP_OUT" type="ADS" />
+        <parameter id="fpcSGSystemOK" description="Matches the FPC digital output IO_SFPS_SG_OK" type="byte" />
+ 
+	<parameter id="canNodeIdFPC" description="The CanOpen id of the FPC" type="byte" />
+
+<!-- --><parameter id="FPConfiguration" description="Configuration ID" type="byte" />
+<!-- --><parameter id="FPVersion" description="FPC Version" type="byte" />
+<!-- --><parameter id="FPCommissioned" description="FPC Commisioned" type="byte" />
+        <parameter id="FPTurbineReleasedForOperation" description="FPTurbineReleasedForOperation" type="byte" />
+<!-- --><parameter id="FPLockedForServiceInspection" description="FPLockedForServiceInspection" type="byte" />
+<!-- --><parameter id="FPLockedForFireInspection" description="FPLockedForFireInspection" type="byte" />
+<!-- --><parameter id="FPInMaintenanceMode" description="FPInMaintenanceMode" type="byte" />
+<!-- --><parameter id="FPInOperatingMode" description="FPInOperatingMode" type="byte" />
+<!--        <parameter id="FPSystemOk" description="FPSystemOk" type="byte" /> -->
+        <parameter id="FPSmokeDetected" description="FPSmokeDetected" type="byte" />
+<!-- --><parameter id="FPFireDetected" description="FPFireDetected" type="byte" />
+<!-- --><parameter id="FPActiveSensorNo" description="FPActiveSensorNo" type="byte" />
+        <parameter id="FPArcDetected" description="FPArcDetected" type="byte" />
+<!--        <parameter id="FPArcDetectorOk" description="FPArcDetectorOk" type="byte" /> -->
+        <parameter id="FPAlarmDevicesOn" description="FPAlarmDevicesOn" type="byte" />
+        <parameter id="FPExtinguishOn" description="FPExtinguishOn" type="byte" />
+<!-- --><parameter id="FPLowOnGas" description="FPLowOnGas" type="byte" />
+<!-- --><parameter id="FPGasValveError" description="FPGasValveError" type="byte" />
+<!-- --><parameter id="FPDiscoveryBusOk" description="FPDiscoveryBusOk" type="byte" />
+<!-- --><parameter id="FPSensorError" description="FPSensorError" type="byte" />
+        <parameter id="FPSensorErrorNode" description="FPSensorErrorNode" type="byte" />
+<!-- --><parameter id="FPSensorSoiled" description="FPSensorSoiled" type="byte" />
+
+        <parameter id="adsFPConfiguration" description="The CanOpen id of the FPC" type="CAN" />
+        <parameter id="adsFPVersion" description="The CanOpen id of the FPC" type="CAN" />
+        <parameter id="adsStatusBits" description="The CanOpen id of the FPC" type="CAN" />
+        <parameter id="adsFPActiveSensorNo" description="The CanOpen id of the FPC" type="CAN" />
+
+        <parameter id="adsFPSensorMounted" description="The CanOpen id of the FPC" type="CAN" />
+
+        <parameter id="FPSensor0Mounted" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor1Mounted" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor2Mounted" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor3Mounted" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor4Mounted" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor5Mounted" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor6Mounted" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor7Mounted" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor8Mounted" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor9Mounted" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor10Mounted" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor11Mounted" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor12Mounted" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor13Mounted" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor14Mounted" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor15Mounted" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor16Mounted" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor17Mounted" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor18Mounted" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor19Mounted" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor20Mounted" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor21Mounted" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor22Mounted" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor23Mounted" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor24Mounted" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor25Mounted" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor26Mounted" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor27Mounted" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor28Mounted" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor29Mounted" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor30Mounted" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor31Mounted" description="The CanOpen id of the FPC" type="byte" />
+        
+        <parameter id="adsFPSensorOk" description="The CanOpen id of the FPC" type="CAN" />
+
+        <parameter id="FPSensor0Ok" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor1Ok" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor2Ok" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor3Ok" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor4Ok" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor5Ok" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor6Ok" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor7Ok" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor8Ok" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor9Ok" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor10Ok" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor11Ok" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor12Ok" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor13Ok" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor14Ok" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor15Ok" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor16Ok" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor17Ok" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor18Ok" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor19Ok" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor20Ok" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor21Ok" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor22Ok" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor23Ok" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor24Ok" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor25Ok" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor26Ok" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor27Ok" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor28Ok" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor29Ok" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor30Ok" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor31Ok" description="The CanOpen id of the FPC" type="byte" />
+
+        <parameter id="adsFPSensor0SmokeLevel" description="The CanOpen id of the FPC" type="CAN" />
+
+        <parameter id="FPSensor0SmokeLevel" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor1SmokeLevel" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor2SmokeLevel" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor3SmokeLevel" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor4SmokeLevel" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor5SmokeLevel" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor6SmokeLevel" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor7SmokeLevel" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor8SmokeLevel" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor9SmokeLevel" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor10SmokeLevel" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor11SmokeLevel" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor12SmokeLevel" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor13SmokeLevel" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor14SmokeLevel" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor15SmokeLevel" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor16SmokeLevel" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor17SmokeLevel" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor18SmokeLevel" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor19SmokeLevel" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor20SmokeLevel" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor21SmokeLevel" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor22SmokeLevel" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor23SmokeLevel" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor24SmokeLevel" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor25SmokeLevel" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor26SmokeLevel" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor27SmokeLevel" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor28SmokeLevel" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor29SmokeLevel" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor30SmokeLevel" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor31SmokeLevel" description="The CanOpen id of the FPC" type="byte" />
+    
+        <parameter id="adsFPSensor0SoilLevel" description="The CanOpen id of the FPC" type="CAN" />
+
+        <parameter id="FPSensor0SoilLevel" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor1SoilLevel" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor2SoilLevel" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor3SoilLevel" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor4SoilLevel" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor5SoilLevel" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor6SoilLevel" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor7SoilLevel" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor8SoilLevel" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor9SoilLevel" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor10SoilLevel" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor11SoilLevel" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor12SoilLevel" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor13SoilLevel" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor14SoilLevel" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor15SoilLevel" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor16SoilLevel" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor17SoilLevel" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor18SoilLevel" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor19SoilLevel" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor20SoilLevel" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor21SoilLevel" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor22SoilLevel" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor23SoilLevel" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor24SoilLevel" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor25SoilLevel" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor26SoilLevel" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor27SoilLevel" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor28SoilLevel" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor29SoilLevel" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor30SoilLevel" description="The CanOpen id of the FPC" type="byte" />
+        <parameter id="FPSensor31SoilLevel" description="The CanOpen id of the FPC" type="byte" />
+
+        <parameter id="ServiceCommandStatus" description="Response from ServiceCommand read commands" type="int" />
+        <parameter id="ServiceCommandSDO" description="Service command SDO location (hexadecimal)" type="int" />
+        <parameter id="ServiceCommandIdx1" description="Service command idx for target byte" type="int" />
+
+        <parameter id="FPPollutionStatus" description="Set to true if any MS indicates smoke and the heat did not raise 5 deg within 10 min." type="byte" />
+        <parameter id="adsFPPollution" description="The ads variable for the FPPollution flag" type="CAN" />
+
+    </properties>
+
+    <operations>
+        <operation id="1" name="TCServiceInspectionReset" description="Sending Service Reset from TiC" />
+        <operation id="2" name="TCFireMarchalReset" description="Sending Fire Marshall Reset from TiC" />
+        <operation id="4" name="TCMaintenanceModeEnter" description="Sending Enter Maintenance mode from TiC" />
+        <operation id="8" name="TCMaintenanceModeLeave" description="Sending Leave Maintenance mode from TiC" />
+        <operation id="16" name="TCSilenceAlarms" description="Sending Silence Alarms from TiC" />
+        <operation id="32" name="AckGas" description="Sending Ack Gas Replacement from TiC" />
+        <operation id="64" name="TCCommissionedReset" description="Sending Reset Commissioning from TiC"/>
+        <operation id="128" name="SendServiceCommand" description="Sends a service command to the PLC">
+            <parameter id="Target" description="The system service identifier that is target of the command." type="int" />
+            <parameter id="Command" description="The command to send to the service" type="int" />
+            <parameter id="Parameter1" description="First parameter to send to target" type="int" />
+            <parameter id="Parameter2" description="Second parameter to send to target" type="int" />
+        </operation>	
+        <operation id="129" name="ServiceCommandDisableSensor" description="Disable sensor #SensorId#">
+            <parameter id="SensorId" description="Id of sensor to be disabled" type="int" />
+        </operation>
+        <operation id="130" name="ServiceCommandToggleDisableSensor" description="Toggle Enable/Disable #SensorId#">
+            <parameter id="SensorId" description="Id of target sensor" type="int"/>
+        </operation>
+        <operation id="131" name="ServiceCommandSetHeatTripValue" description="Set Direct Heat Trip Value of #SensorId# to #Value# degrees celcius">
+            <parameter id="SensorId" description="Id of target sensor" type="int" />
+            <parameter id="Value" description="New Direct Heat Trip Value (celcius)" type="int" />
+        </operation>
+        <operation id="132" name="ServiceCommandClear" description="Clear service command." />
+    </operations>
+
+</driver>

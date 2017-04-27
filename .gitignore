@@ -1,1 +1,64 @@
-node_modules/*
+# wac 2017 NB: This is NOT (yet) a .gitignore for the RELEASE distribution            #
+# test .gitignore with git add --all -n to see what will/willnot be staged on git add #
+#######################################################################################
+
+####################################################
+# files /not_in_use or /deprecated                 #
+# no unused or stale files are allowed in the repo #
+####################################################
+not_in_use
+*/not_in_use
+*/*/not_in_use
+*/*/*/not_in_use
+deprecated
+*/deprecated
+*/*/deprecated
+*/*/*/deprecated
+
+######################################################################################
+# all node_modules from package.json ==> shall be maintained via npm with --save     #
+# Note that the RELEASED product image shall contain an image of node_modules in git #
+######################################################################################
+node_modules/
+
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+*.suo
+*.pdb
+
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+

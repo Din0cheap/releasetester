@@ -1,0 +1,9 @@
+{
+    "masterTestPlan": {
+        "name": "aMasterTestPlanNameExample",
+        "description": "",
+        "goal": "",
+        "time": "",
+        "levelTestPlans": []
+    }
+}

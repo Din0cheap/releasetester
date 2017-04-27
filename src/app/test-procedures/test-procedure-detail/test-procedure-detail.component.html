@@ -1,0 +1,58 @@
+<div *ngIf="testprocedure">
+
+    <h5>{{testprocedure.name}} details</h5>
+
+    <table>
+        <tr>
+            <th>id: </th>
+            <th>{{testprocedure.id}}</th>
+        </tr>
+        <tr>
+            <th>name:</th>
+            <th><input [(ngModel)]="testprocedure.name" placeholder="name"></th>
+        </tr>
+        <tr>
+            <th>setup:</th>
+            <th>
+                <div *ngIf="testprocedure.setup" class="component">
+                    <li [class.selected]="testprocedure === selectedTestprocedure" (mouseleave)="onHover(null)" (mouseenter)="onHover(setup)"
+                        (click)="gotoDetail(setup)">
+                        <span class="badge">{{setup.id}}</span>
+                        <span>{{setup.name}}</span>
+                    </li>
+                </div>
+            </th>
+        </tr>
+        <tr>
+            <th>cleanup:</th>
+            <th>
+                <div *ngIf="testprocedure.cleanup" class="component">
+                    <li [class.selected]="testprocedure === selectedTestprocedure" (mouseleave)="onHover(null)" (mouseenter)="onHover(cleanup)"
+                        (click)="gotoDetail(cleanup)">
+                        <span class="badge">{{cleanup.id}}</span>
+                        <span>{{cleanup.name}}</span>
+                    </li>
+                </div>
+            </th>
+        </tr>
+        <tr>
+            <th>time:</th>
+            <th><input [(ngModel)]="testprocedure.time"  type="number" min="0" placeholder="time"><label>s</label></th>
+        </tr>
+    </table>
+
+
+
+    <button (click)="save()">Save</button>
+    <button (click)="goBack()">Back</button>
+
+
+    <div *ngIf="selectedTestprocedure" class="component">
+        <li [class.selected]="testprocedure === selectedTestprocedure" (mouseleave)="onHover(null)" (click)="gotoDetail(setup)">
+            <span class="badge">{{selectedTestprocedure.id}}</span>
+            <span>{{selectedTestprocedure.name}}</span>
+        </li>
+    </div>
+
+
+</div>

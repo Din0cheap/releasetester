@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <model id="FireProtection" xmlns:tns="http://www.rogd.dk/devicemodel" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.rogd.dk/devicemodel" xsi:schemaLocation="http://www.rogd.dk/devicemodel devicemodel.xsd">
+        <!--  Information for the hardware abstraction layer -->
+        <hardware>
+            <device id="Smoke Detection" type="ALM">
+                <description>The ALM device using EL6002 RS232 port</description>
+                <setup>
+                    <param id="port" value="ECAT" />
+                    <param id="amsAddress" value="5.8.44.232.1.1" />
+                    <param id="amsPort" value="301" />
+                    <param id="baudrate" value="57600" />
+                    <param id="databits" value="None" />
+                    <param id="parity" value="None" />
+                    <param id="stopbits" value="1" />
+                    <param id="flowcontrol" value="None" />
+                    <param id="extinguishType" value="MARDU" />
+                    <!-- discover value format (hex): "type:mode:id:value1:value2:typecode:monthofManufacture:region:driftdata:analogheatvalue:rapidCompensation:flashingLed:loopNo" -->
+
+                    <param id="device1" value="B8:03:01:19:00:44:ff:80:00:19:00:00:00" />
+                    <param id="device2" value="B8:03:02:19:00:44:ff:80:00:19:00:00:00" />
+                    <param id="device3" value="B8:03:03:19:00:44:ff:80:00:19:00:00:00" />
+                    <param id="device4" value="B8:03:04:19:00:44:ff:80:00:19:00:00:00" />
+                    <param id="device5" value="B8:03:05:19:00:44:ff:80:00:19:00:00:00" />
+                    <param id="device6" value="B8:03:06:19:00:44:ff:80:00:19:00:00:00" />
+                    <param id="device7" value="B8:03:07:19:00:44:ff:80:00:19:00:00:00" />
+                    <param id="device8" value="B8:03:08:19:00:44:ff:80:00:19:00:00:00" />
+                    <param id="device9" value="B8:03:09:19:00:44:ff:80:00:19:00:00:00" />
+                    <param id="device10" value="B8:03:0a:19:00:44:ff:80:00:19:00:00:00" />
+                    <param id="device11" value="B8:03:0b:19:00:44:ff:80:00:19:00:00:01" />
+                    <param id="device12" value="B8:03:0c:19:00:44:ff:80:00:19:00:00:01" />
+                    <param id="device13" value="B8:03:0d:19:00:44:ff:80:00:19:00:00:01" />
+                    <param id="device14" value="B8:03:0e:19:00:44:ff:80:00:19:00:00:01" />
+                    <param id="device15" value="B8:03:0f:19:00:44:ff:80:00:19:00:00:01" />
+                    <param id="device16" value="B8:03:10:19:00:44:ff:80:00:19:00:00:01" />
+                    <param id="device17" value="B8:03:11:19:00:44:ff:80:00:19:00:00:01" />
+                    <param id="device18" value="B8:03:12:19:00:44:ff:80:00:19:00:00:01" />
+                    <param id="device19" value="B8:03:13:19:00:44:ff:80:00:19:00:00:01" />
+                    <param id="device20" value="B8:03:14:19:00:44:ff:80:00:19:00:00:01" />
+                    <param id="device21" value="B8:03:15:19:00:44:ff:80:00:19:00:00:01" />
+                    <param id="device22" value="B8:03:16:19:00:44:ff:80:00:19:00:00:01" />
+                    <param id="device23" value="B8:03:17:19:00:44:ff:80:00:19:00:00:00" />
+                    <param id="device24" value="B8:03:18:19:00:44:ff:80:00:19:00:00:00" />
+                    <param id="device25" value="B8:03:19:19:00:44:ff:80:00:19:00:00:00" />
+                    <!-- Tower Beacons -->
+                    <param id="device30" value="20:03:1e:19:00:44:ff:80:00:00:00:00:00" />
+                    <param id="device31" value="20:03:1f:19:00:44:ff:80:00:00:00:00:01" />
+                    <param id="moduleID" value="05" />
+                    <param id="majorVersionNo" value="03" />
+                    <param id="minorVersionNo" value="02" />
+                    <param id="revisionNo" value="00" />
+                    <param id="buildNo" value="05" />
+                    <param id="loopNo" value="00:01" />
+                </setup>
+            </device>
+            <!--
+            <device id="Arc Detection" type="VAMP">
+                <description>The VAMP controller</description>
+                <setup>
+                    <param id="amsAddress" value="5.8.44.232.1.1" />
+                    <param id="amsPort" value="301" />
+                    <param id="adsTripPort" value="SIMULATOR:VAMPTRIP:FALSE:BOOL" />
+                    <param id="adsFailurePort" value="SIMULATOR:VAMPERROR:FALSE:BOOL" />
+                    <param id="sensor1" value="s1:0:0" />
+                    <param id="sensor2" value="s2:0:0" />
+                    <param id="sensor3" value="s3:0:0" />
+                    <param id="sensor4" value="s4:0:0" />
+                    <param id="sensor5" value="s5:0:0" />
+                    <param id="sensor6" value="s6:0:0" />
+                    <param id="sensor7" value="s7:0:0" />
+                    <param id="sensor8" value="s8:0:0" />
+                    <param id="sensor9" value="s9:0:0" />
+                    <param id="isTripped" value="0" />
+                    <param id="isFailed" value="1" />
+                </setup>
+            </device>
+-->
+            <!--
+    <device id="Extinguishing" type="Extinguish">
+                <description>The Extinguishing System</description>
+                <setup>
+                    <param id="amsAddress" value="5.8.44.232.1.1" />
+                    <param id="amsPort" value="301" />
+                    <param id="adsActivatePort" value="" />
+                    <param id="adsPressureAnalogPort" value="SIMULATOR:GASPRESSUREANALOG:FALSE:BYTE" />
+                    <param id="adsPressureDigitalPort" value="SIMULATOR:GASPRESSUREDIGITAL:FALSE:BOOL" />
+                    <param id="adsCircuitPort" value="SIMULATOR:VALVECIRCUITBREAKER:FALSE:BOOL" />
+                    <param id="adsActivatePort" value="SIMULATOR:GASINTOWER:TRUE:BOOL" />
+
+                    <param id="extinguishingState" value="0" />
+                    <param id="gasPressureAnalog" value="0" />
+                    <param id="gasPressureDigital" value="0" />
+                    <param id="pressureCircuitState" value="0" />
+
+                </setup>
+            </device>
+-->
+            <device id="TIC" type="TIC">
+                <description>Turbine Industrial Controller</description>
+                <setup>
+                    <param id="amsAddress" value="5.8.44.232.1.1" />
+                    <param id="amsPort" value="301" />
+
+                    <param id="canAmsAddress" value="5.8.44.232.1.1" />
+                    <param id="canAmsPort" value="301" />
+                    <param id="canNodeIdFPC" value="1" />
+                    <param id="adsCanFPCCommands" value="SIMULATOR:CANFPCCOMMANDS:FALSE:BYTE" />
+                    <param id="canFPCCommands" value="0" />
+
+                    <param id="adsSmokeNotDetected" value="SIMULATOR:SMOKENOTDETECTED:TRUE:BOOL" />
+                    <param id="adsSystemOK" value="SIMULATOR:SYSTEMOK:TRUE:BOOL" />
+                    <param id="adsSystemUpRunning" value="SIMULATOR:SystemUpRunning:TRUE:BOOL" />
+                    <param id="adsSGNotTripped" value="SIMULATOR:SGNOTTRIPPED:TRUE:BOOL" />
+                    <param id="adsSGSystemOK" value="SIMULATOR:SGSYSTEMOK:TRUE:BOOL" />
+
+                    <param id="fpcSystemOK" value="0" />
+                    <param id="fpcSystemUpRunning" value="0" />
+                    <param id="fpcSmokeNotDetected" value="0" />
+                    <param id="fpcSGNotTripped" value="0" />
+                    <param id="fpcSGSystemOK" value="0" />
+
+                    <param id="FPConfiguration" value="0" />
+                    <param id="FPVersion" value="0" />
+                    <param id="FPCommissioned" value="0" />
+                    <param id="FPTurbineReleasedForOperation" value="0" />
+                    <param id="FPLockedForServiceInspection" value="0" />
+                    <param id="FPLockedForFireInspection" value="1" />
+                    <param id="FPInMaintenanceMode" value="0" />
+                    <param id="FPInOperatingMode" value="0" />
+                    <param id="FPSmokeDetected" value="1" />
+                    <param id="FPFireDetected" value="1" />
+                    <param id="FPActiveSensorNo" value="0" />
+                    <param id="FPArcDetected" value="1" />
+                    <param id="FPAlarmDevicesOn" value="1" />
+                    <param id="FPExtinguishOn" value="0" />
+                    <param id="FPLowOnGas" value="1" />
+                    <param id="FPGasValveError" value="1" />
+                    <param id="FPDiscoveryBusOk" value="0" />
+                    <param id="FPSensorError" value="1" />
+                    <param id="FPSensorErrorNode" value="0" />
+                    <param id="FPSensorSoiled" value="1" />
+
+                    <param id="adsFPConfiguration" value="SIMULATOR:CANSFPSCONFIGURATION:TRUE:BYTE" />
+                    <param id="adsFPVersion" value="SIMULATOR:CANVERSION:TRUE:BYTE" />
+                    <param id="adsFPActiveSensorNo" value="SIMULATOR:CANACTIVESENSORNO:TRUE:BYTE" />
+                    <param id="adsStatusBits" value="SIMULATOR:CANSTATUSBITS:TRUE:UINT" />
+
+                    <param id="adsFPSensorMounted" value="SIMULATOR:CANSENSORMOUNTED:TRUE:UINT" />
+                    <param id="FPSensor0Mounted" value="0" />
+                    <param id="FPSensor1Mounted" value="0" />
+                    <param id="FPSensor2Mounted" value="0" />
+                    <param id="FPSensor3Mounted" value="0" />
+                    <param id="FPSensor4Mounted" value="0" />
+                    <param id="FPSensor5Mounted" value="0" />
+                    <param id="FPSensor6Mounted" value="0" />
+                    <param id="FPSensor7Mounted" value="0" />
+                    <param id="FPSensor8Mounted" value="0" />
+                    <param id="FPSensor9Mounted" value="0" />
+                    <param id="FPSensor10Mounted" value="0" />
+                    <param id="FPSensor11Mounted" value="0" />
+                    <param id="FPSensor12Mounted" value="0" />
+                    <param id="FPSensor13Mounted" value="0" />
+                    <param id="FPSensor14Mounted" value="0" />
+                    <param id="FPSensor15Mounted" value="0" />
+                    <param id="FPSensor16Mounted" value="0" />
+                    <param id="FPSensor17Mounted" value="0" />
+                    <param id="FPSensor18Mounted" value="0" />
+                    <param id="FPSensor19Mounted" value="0" />
+                    <param id="FPSensor20Mounted" value="0" />
+                    <param id="FPSensor21Mounted" value="0" />
+                    <param id="FPSensor22Mounted" value="0" />
+                    <param id="FPSensor23Mounted" value="0" />
+                    <param id="FPSensor24Mounted" value="0" />
+                    <param id="FPSensor25Mounted" value="0" />
+                    <param id="FPSensor26Mounted" value="0" />
+                    <param id="FPSensor27Mounted" value="0" />
+                    <param id="FPSensor28Mounted" value="0" />
+                    <param id="FPSensor29Mounted" value="0" />
+                    <param id="FPSensor30Mounted" value="0" />
+                    <param id="FPSensor31Mounted" value="0" />
+                    <param id="adsFPSensorOk" value="SIMULATOR:CANSENSOROK:TRUE:UINT" />
+                    <param id="FPSensor0Ok" value="0" />
+                    <param id="FPSensor1Ok" value="0" />
+                    <param id="FPSensor2Ok" value="0" />
+                    <param id="FPSensor3Ok" value="0" />
+                    <param id="FPSensor4Ok" value="0" />
+                    <param id="FPSensor5Ok" value="0" />
+                    <param id="FPSensor6Ok" value="0" />
+                    <param id="FPSensor7Ok" value="0" />
+                    <param id="FPSensor8Ok" value="0" />
+                    <param id="FPSensor9Ok" value="0" />
+                    <param id="FPSensor10Ok" value="0" />
+                    <param id="FPSensor11Ok" value="0" />
+                    <param id="FPSensor12Ok" value="0" />
+                    <param id="FPSensor13Ok" value="0" />
+                    <param id="FPSensor14Ok" value="0" />
+                    <param id="FPSensor15Ok" value="0" />
+                    <param id="FPSensor16Ok" value="0" />
+                    <param id="FPSensor17Ok" value="0" />
+                    <param id="FPSensor18Ok" value="0" />
+                    <param id="FPSensor19Ok" value="0" />
+                    <param id="FPSensor20Ok" value="0" />
+                    <param id="FPSensor21Ok" value="0" />
+                    <param id="FPSensor22Ok" value="0" />
+                    <param id="FPSensor23Ok" value="0" />
+                    <param id="FPSensor24Ok" value="0" />
+                    <param id="FPSensor25Ok" value="0" />
+                    <param id="FPSensor26Ok" value="0" />
+                    <param id="FPSensor27Ok" value="0" />
+                    <param id="FPSensor28Ok" value="0" />
+                    <param id="FPSensor29Ok" value="0" />
+                    <param id="FPSensor30Ok" value="0" />
+                    <param id="FPSensor31Ok" value="0" />
+                    <param id="adsFPSensor0SmokeLevel" value="SIMULATOR:SMOKELEVELARRAY:TRUE:ARRAY#32" />
+                    <param id="FPSensor0SmokeLevel" value="0" />
+                    <param id="FPSensor1SmokeLevel" value="0" />
+                    <param id="FPSensor2SmokeLevel" value="0" />
+                    <param id="FPSensor3SmokeLevel" value="0" />
+                    <param id="FPSensor4SmokeLevel" value="0" />
+                    <param id="FPSensor5SmokeLevel" value="0" />
+                    <param id="FPSensor6SmokeLevel" value="0" />
+                    <param id="FPSensor7SmokeLevel" value="0" />
+                    <param id="FPSensor8SmokeLevel" value="0" />
+                    <param id="FPSensor9SmokeLevel" value="0" />
+                    <param id="FPSensor10SmokeLevel" value="0" />
+                    <param id="FPSensor11SmokeLevel" value="0" />
+                    <param id="FPSensor12SmokeLevel" value="0" />
+                    <param id="FPSensor13SmokeLevel" value="0" />
+                    <param id="FPSensor14SmokeLevel" value="0" />
+                    <param id="FPSensor15SmokeLevel" value="0" />
+                    <param id="FPSensor16SmokeLevel" value="0" />
+                    <param id="FPSensor17SmokeLevel" value="0" />
+                    <param id="FPSensor18SmokeLevel" value="0" />
+                    <param id="FPSensor19SmokeLevel" value="0" />
+                    <param id="FPSensor20SmokeLevel" value="0" />
+                    <param id="FPSensor21SmokeLevel" value="0" />
+                    <param id="FPSensor22SmokeLevel" value="0" />
+                    <param id="FPSensor23SmokeLevel" value="0" />
+                    <param id="FPSensor24SmokeLevel" value="0" />
+                    <param id="FPSensor25SmokeLevel" value="0" />
+                    <param id="FPSensor26SmokeLevel" value="0" />
+                    <param id="FPSensor27SmokeLevel" value="0" />
+                    <param id="FPSensor28SmokeLevel" value="0" />
+                    <param id="FPSensor29SmokeLevel" value="0" />
+                    <param id="FPSensor30SmokeLevel" value="0" />
+                    <param id="FPSensor31SmokeLevel" value="0" />
+                    <param id="adsFPSensor0SoilLevel" value="SIMULATOR:CANSOILLEVELARRAY:TRUE:ARRAY#32" />
+                    <param id="FPSensor0SoilLevel" value="0" />
+                    <param id="FPSensor1SoilLevel" value="0" />
+                    <param id="FPSensor2SoilLevel" value="0" />
+                    <param id="FPSensor3SoilLevel" value="0" />
+                    <param id="FPSensor4SoilLevel" value="0" />
+                    <param id="FPSensor5SoilLevel" value="0" />
+                    <param id="FPSensor6SoilLevel" value="0" />
+                    <param id="FPSensor7SoilLevel" value="0" />
+                    <param id="FPSensor8SoilLevel" value="0" />
+                    <param id="FPSensor9SoilLevel" value="0" />
+                    <param id="FPSensor10SoilLevel" value="0" />
+                    <param id="FPSensor11SoilLevel" value="0" />
+                    <param id="FPSensor12SoilLevel" value="0" />
+                    <param id="FPSensor13SoilLevel" value="0" />
+                    <param id="FPSensor14SoilLevel" value="0" />
+                    <param id="FPSensor15SoilLevel" value="0" />
+                    <param id="FPSensor16SoilLevel" value="0" />
+                    <param id="FPSensor17SoilLevel" value="0" />
+                    <param id="FPSensor18SoilLevel" value="0" />
+                    <param id="FPSensor19SoilLevel" value="0" />
+                    <param id="FPSensor20SoilLevel" value="0" />
+                    <param id="FPSensor21SoilLevel" value="0" />
+                    <param id="FPSensor22SoilLevel" value="0" />
+                    <param id="FPSensor23SoilLevel" value="0" />
+                    <param id="FPSensor24SoilLevel" value="0" />
+                    <param id="FPSensor25SoilLevel" value="0" />
+                    <param id="FPSensor26SoilLevel" value="0" />
+                    <param id="FPSensor27SoilLevel" value="0" />
+                    <param id="FPSensor28SoilLevel" value="0" />
+                    <param id="FPSensor29SoilLevel" value="0" />
+                    <param id="FPSensor30SoilLevel" value="0" />
+                    <param id="FPSensor31SoilLevel" value="0" />
+                    <param id="ServiceCommandSDO" value="2200" />
+                    <param id="ServiceCommandIdx1" value="5" />
+
+                    <param id="FPPollutionStatus" value="0" />
+                    <param id="adsFPPollution" value="SIMULATOR:CANFPPOLLUTION:TRUE:BYTE" />
+                </setup>
+            </device>
+            <device id="FPCExterior" type="FPCExterior">
+                <description>Handling external FPC attributes</description>
+                <setup>
+                    <param id="amsAddress" value="5.8.44.232.1.1" />
+                    <param id="amsPort" value="301" />
+                    <param id="adsPLCPower" value="SIMULATOR:PLCPOWER:FALSE:BOOL" />
+                    <param id="plcPowerOn" value="1" />
+                </setup>
+            </device>
+        </hardware>
+    </model>

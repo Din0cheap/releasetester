@@ -1,0 +1,61 @@
+{
+    "testProcedure": {
+        "name": "adsHMICmd",
+        "description": "description",
+        "scope": "description of the scope of this procedure",
+        "setup": "another_test_procedure",
+        "test": [
+            {
+                "preconditions": [
+                    {
+                        "time": "",
+                        "name": "supervisorInState",
+                        "args": {
+                            "adsVar": "stSV.state"
+                        },
+                        "expect": {
+                            "value": "conditioning",
+                            "type": "E_Supervisor.States"
+                        },
+                        "logic": "equal",
+                        "reportMessage": "Supervisor is in the conditioning state",
+                        "target": "lorc",
+                        "inReport": "true"
+                    }
+                ],
+                "operations": [
+                    {
+                        "time": "",
+                        "name": "toConditioningInSuper",
+                        "args": {
+                            "adsVar": "stSV.cmdHMI",
+                            "value": "startWarmUp",
+                            "type": "E_Supervisor.HMICmds"
+                        },
+                        "reportMessage": "sending the HMI cmd startWarmUp to the supervisor",
+                        "target": "lorc",
+                        "inReport": "true"
+                    }
+                ],
+                "postconditions": [
+                    {
+                        "time": "",
+                        "name": "supervisorInState",
+                        "args": {
+                            "adsVar": "stSV.state"
+                        },
+                        "expect": {
+                            "value": "conditioning",
+                            "type": "E_Supervisor.States"
+                        },
+                        "logic": "equal",
+                        "reportMessage": "Supervisor is in the conditioning state",
+                        "target": "lorc",
+                        "inReport": "true"
+                    }
+                ]
+            }
+        ],
+        "cleanup": "another_test_procedure"
+    }
+}

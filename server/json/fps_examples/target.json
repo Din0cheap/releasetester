@@ -1,0 +1,95 @@
+{
+    "driver": {
+        "id": "TIC",
+        "description": [
+            "Vestas Turbine Industrial Controller"
+        ],
+        "propertytypes": [
+            {
+                "type": [
+                    {
+                        "name": "ADS",
+                        "parameter": [
+                            {
+                                "id": "task",
+                                "description": "The ADS task identifier",
+                                "value": "0",
+                                "type": "string"
+                            },
+                            {
+                                "id": "variable",
+                                "description": "The ADS variable identifier",
+                                "value": "1",
+                                "type": "string"
+                            },
+                            {
+                                "id": "type",
+                                "description": "The ADS type (true is input, false is output)",
+                                "value": "2",
+                                "type": "bool"
+                            },
+                            {
+                                "id": "size",
+                                "description": "The size of the variable",
+                                "value": "3",
+                                "type": "string"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "properties": [
+            {
+                "parameter": [
+                    {
+                        "id": "amsAddress",
+                        "description": "The AMSaddress of the TwinCAT task for the IO variables",
+                        "type": "string"
+                    },
+                    {
+                        "id": "canAmsAddress",
+                        "description": "The AMSaddress of the TwinCAT CANOpen node",
+                        "type": "string"
+                    },
+                    {
+                        "id": "canFPCCommands",
+                        "description": "Command bits from TiC to PLC",
+                        "type": "byte"
+                    },
+                    {
+                        "id": "adsSmokeNotDetected",
+                        "description": "ADS variable for the FPC digital output IO_SFPS_SmokeNotDetected_OUT",
+                        "type": "ADS"
+                    },
+                    {
+                        "id": "fpcSmokeNotDetected",
+                        "description": "Matches the FPC digital output IO_SFPS_SmokeNotDetected_OUT",
+                        "type": "byte"
+                    },
+                    {
+                        "id": "adsSystemOK",
+                        "description": "ADS variable for the FPC digital output IO_SFPS_SYSTEM_OK_TC_OUT",
+                        "type": "ADS"
+                    }
+                ]
+            }
+        ],
+        "operations": [
+            {
+                "operation": [
+                    {
+                        "id": "1",
+                        "name": "TCServiceInspectionReset",
+                        "description": "Sending Service Reset from TiC"
+                    },
+                    {
+                        "id": "2",
+                        "name": "TCFireMarchalReset",
+                        "description": "Sending Fire Marshall Reset from TiC"
+                    }
+                ]
+            }
+        ]
+    }
+}

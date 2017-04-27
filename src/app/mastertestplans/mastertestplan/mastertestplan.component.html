@@ -1,0 +1,30 @@
+<div>
+    <h2>Master testplans</h2>
+    <div>
+        <input #mastertestplanName/>
+        <button (click)="add(mastertestplanName.value); mastertestplanName.value=''">add</button>
+    </div>
+    <div>
+        <mastertestplan-search></mastertestplan-search>
+    </div>
+    <div class="wrapper">
+        <div>
+            <ul class="component">
+                <li *ngFor="let mastertestplan of mastertestplans" [class.selected]="mastertestplan === selectedMastertestplan" (click)="onSelect(mastertestplan)">
+                    <span class="badge">{{mastertestplan.id}}</span>
+                    <span>{{mastertestplan.name}}</span>
+                </li>
+
+
+            </ul>
+        </div>
+        <div *ngIf="selectedMastertestplan" class="subcomponent">
+            <h3>
+                {{selectedMastertestplan.name | uppercase}}
+            </h3>
+            leveltestplans: {{testplanCount}}
+            <button (click)="gotoDetail()">edit</button>
+            <button class="delete" (click)="delete(selectedMastertestplan); $event.stopPropagation()">delete</button>
+        </div>
+    </div>
+</div>

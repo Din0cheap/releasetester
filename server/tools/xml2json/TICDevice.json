@@ -1,0 +1,1504 @@
+{
+  "driver": {
+    "$": {
+      "id": "TIC",
+      "xmlns:tns": "http://www.rogd.dk/driver",
+      "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+      "xmlns": "http://www.rogd.dk/device",
+      "xsi:schemaLocation": "http://www.rogd.dk/device device.xsd"
+    },
+    "description": [
+      "Vestas Turbine Industrial Controller"
+    ],
+    "propertytypes": [
+      {
+        "type": [
+          {
+            "$": {
+              "name": "ADS"
+            },
+            "parameter": [
+              {
+                "$": {
+                  "id": "task",
+                  "description": "The ADS task identifier",
+                  "value": "0",
+                  "type": "string"
+                }
+              },
+              {
+                "$": {
+                  "id": "variable",
+                  "description": "The ADS variable identifier",
+                  "value": "1",
+                  "type": "string"
+                }
+              },
+              {
+                "$": {
+                  "id": "type",
+                  "description": "The ADS type (true is input, false is output)",
+                  "value": "2",
+                  "type": "bool"
+                }
+              },
+              {
+                "$": {
+                  "id": "size",
+                  "description": "The size of the variable",
+                  "value": "3",
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          {
+            "$": {
+              "name": "CAN"
+            },
+            "parameter": [
+              {
+                "$": {
+                  "id": "task",
+                  "description": "The ADS task identifier",
+                  "value": "0",
+                  "type": "string"
+                }
+              },
+              {
+                "$": {
+                  "id": "variable",
+                  "description": "The ADS variable identifier",
+                  "value": "1",
+                  "type": "string"
+                }
+              },
+              {
+                "$": {
+                  "id": "type",
+                  "description": "The ADS type (true is input, false is output)",
+                  "value": "2",
+                  "type": "bool"
+                }
+              },
+              {
+                "$": {
+                  "id": "size",
+                  "description": "The size of the variable",
+                  "value": "3",
+                  "type": "string"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "properties": [
+      {
+        "parameter": [
+          {
+            "$": {
+              "id": "amsAddress",
+              "description": "The AMSaddress of the TwinCAT task for the IO variables",
+              "type": "string"
+            }
+          },
+          {
+            "$": {
+              "id": "amsPort",
+              "description": "The AMS port of the TwinCAT task",
+              "type": "uint"
+            }
+          },
+          {
+            "$": {
+              "id": "canAmsAddress",
+              "description": "The AMSaddress of the TwinCAT CANOpen node",
+              "type": "string"
+            }
+          },
+          {
+            "$": {
+              "id": "canAmsPort",
+              "description": "The AMS port of the TwinCAT CANOpen node",
+              "type": "uint"
+            }
+          },
+          {
+            "$": {
+              "id": "adsCanFPCCommands",
+              "description": "Command bits from TiC to PLC",
+              "type": "CAN"
+            }
+          },
+          {
+            "$": {
+              "id": "canFPCCommands",
+              "description": "Command bits from TiC to PLC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "adsSmokeNotDetected",
+              "description": "ADS variable for the FPC digital output IO_SFPS_SmokeNotDetected_OUT",
+              "type": "ADS"
+            }
+          },
+          {
+            "$": {
+              "id": "fpcSmokeNotDetected",
+              "description": "Matches the FPC digital output IO_SFPS_SmokeNotDetected_OUT",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "adsSystemOK",
+              "description": "ADS variable for the FPC digital output IO_SFPS_SYSTEM_OK_TC_OUT",
+              "type": "ADS"
+            }
+          },
+          {
+            "$": {
+              "id": "fpcSystemOK",
+              "description": "Matches the FPC digital output IO_SFPS_SYSTEM_OK_TC_OUT",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "adsSystemUpRunning",
+              "description": "ADS variable for the FPC digital output IO_SFPS_SystemUpRunning_OUT",
+              "type": "ADS"
+            }
+          },
+          {
+            "$": {
+              "id": "fpcSystemUpRunning",
+              "description": "Matches the FPC digital output IO_SFPS_SystemUpRunning_OUT",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "adsSGNotTripped",
+              "description": "ADS variable for the FPC digital output IO_SFPS_SG_TRIP_OUT",
+              "type": "ADS"
+            }
+          },
+          {
+            "$": {
+              "id": "fpcSGNotTripped",
+              "description": "Matches the FPC digital output IO_SFPS_SG_TRIP_OUT",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "adsSGSystemOK",
+              "description": "ADS variable for the FPC digital output IO_SFPS_SG_TRIP_OUT",
+              "type": "ADS"
+            }
+          },
+          {
+            "$": {
+              "id": "fpcSGSystemOK",
+              "description": "Matches the FPC digital output IO_SFPS_SG_OK",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "canNodeIdFPC",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPConfiguration",
+              "description": "Configuration ID",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPVersion",
+              "description": "FPC Version",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPCommissioned",
+              "description": "FPC Commisioned",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPTurbineReleasedForOperation",
+              "description": "FPTurbineReleasedForOperation",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPLockedForServiceInspection",
+              "description": "FPLockedForServiceInspection",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPLockedForFireInspection",
+              "description": "FPLockedForFireInspection",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPInMaintenanceMode",
+              "description": "FPInMaintenanceMode",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPInOperatingMode",
+              "description": "FPInOperatingMode",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSmokeDetected",
+              "description": "FPSmokeDetected",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPFireDetected",
+              "description": "FPFireDetected",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPActiveSensorNo",
+              "description": "FPActiveSensorNo",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPArcDetected",
+              "description": "FPArcDetected",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPAlarmDevicesOn",
+              "description": "FPAlarmDevicesOn",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPExtinguishOn",
+              "description": "FPExtinguishOn",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPLowOnGas",
+              "description": "FPLowOnGas",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPGasValveError",
+              "description": "FPGasValveError",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPDiscoveryBusOk",
+              "description": "FPDiscoveryBusOk",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensorError",
+              "description": "FPSensorError",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensorErrorNode",
+              "description": "FPSensorErrorNode",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensorSoiled",
+              "description": "FPSensorSoiled",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "adsFPConfiguration",
+              "description": "The CanOpen id of the FPC",
+              "type": "CAN"
+            }
+          },
+          {
+            "$": {
+              "id": "adsFPVersion",
+              "description": "The CanOpen id of the FPC",
+              "type": "CAN"
+            }
+          },
+          {
+            "$": {
+              "id": "adsStatusBits",
+              "description": "The CanOpen id of the FPC",
+              "type": "CAN"
+            }
+          },
+          {
+            "$": {
+              "id": "adsFPActiveSensorNo",
+              "description": "The CanOpen id of the FPC",
+              "type": "CAN"
+            }
+          },
+          {
+            "$": {
+              "id": "adsFPSensorMounted",
+              "description": "The CanOpen id of the FPC",
+              "type": "CAN"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor0Mounted",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor1Mounted",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor2Mounted",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor3Mounted",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor4Mounted",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor5Mounted",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor6Mounted",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor7Mounted",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor8Mounted",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor9Mounted",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor10Mounted",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor11Mounted",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor12Mounted",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor13Mounted",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor14Mounted",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor15Mounted",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor16Mounted",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor17Mounted",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor18Mounted",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor19Mounted",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor20Mounted",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor21Mounted",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor22Mounted",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor23Mounted",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor24Mounted",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor25Mounted",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor26Mounted",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor27Mounted",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor28Mounted",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor29Mounted",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor30Mounted",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor31Mounted",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "adsFPSensorOk",
+              "description": "The CanOpen id of the FPC",
+              "type": "CAN"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor0Ok",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor1Ok",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor2Ok",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor3Ok",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor4Ok",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor5Ok",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor6Ok",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor7Ok",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor8Ok",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor9Ok",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor10Ok",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor11Ok",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor12Ok",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor13Ok",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor14Ok",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor15Ok",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor16Ok",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor17Ok",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor18Ok",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor19Ok",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor20Ok",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor21Ok",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor22Ok",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor23Ok",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor24Ok",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor25Ok",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor26Ok",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor27Ok",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor28Ok",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor29Ok",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor30Ok",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor31Ok",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "adsFPSensor0SmokeLevel",
+              "description": "The CanOpen id of the FPC",
+              "type": "CAN"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor0SmokeLevel",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor1SmokeLevel",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor2SmokeLevel",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor3SmokeLevel",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor4SmokeLevel",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor5SmokeLevel",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor6SmokeLevel",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor7SmokeLevel",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor8SmokeLevel",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor9SmokeLevel",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor10SmokeLevel",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor11SmokeLevel",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor12SmokeLevel",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor13SmokeLevel",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor14SmokeLevel",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor15SmokeLevel",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor16SmokeLevel",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor17SmokeLevel",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor18SmokeLevel",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor19SmokeLevel",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor20SmokeLevel",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor21SmokeLevel",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor22SmokeLevel",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor23SmokeLevel",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor24SmokeLevel",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor25SmokeLevel",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor26SmokeLevel",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor27SmokeLevel",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor28SmokeLevel",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor29SmokeLevel",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor30SmokeLevel",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor31SmokeLevel",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "adsFPSensor0SoilLevel",
+              "description": "The CanOpen id of the FPC",
+              "type": "CAN"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor0SoilLevel",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor1SoilLevel",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor2SoilLevel",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor3SoilLevel",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor4SoilLevel",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor5SoilLevel",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor6SoilLevel",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor7SoilLevel",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor8SoilLevel",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor9SoilLevel",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor10SoilLevel",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor11SoilLevel",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor12SoilLevel",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor13SoilLevel",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor14SoilLevel",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor15SoilLevel",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor16SoilLevel",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor17SoilLevel",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor18SoilLevel",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor19SoilLevel",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor20SoilLevel",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor21SoilLevel",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor22SoilLevel",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor23SoilLevel",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor24SoilLevel",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor25SoilLevel",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor26SoilLevel",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor27SoilLevel",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor28SoilLevel",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor29SoilLevel",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor30SoilLevel",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "FPSensor31SoilLevel",
+              "description": "The CanOpen id of the FPC",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "ServiceCommandStatus",
+              "description": "Response from ServiceCommand read commands",
+              "type": "int"
+            }
+          },
+          {
+            "$": {
+              "id": "ServiceCommandSDO",
+              "description": "Service command SDO location (hexadecimal)",
+              "type": "int"
+            }
+          },
+          {
+            "$": {
+              "id": "ServiceCommandIdx1",
+              "description": "Service command idx for target byte",
+              "type": "int"
+            }
+          },
+          {
+            "$": {
+              "id": "FPPollutionStatus",
+              "description": "Set to true if any MS indicates smoke and the heat did not raise 5 deg within 10 min.",
+              "type": "byte"
+            }
+          },
+          {
+            "$": {
+              "id": "adsFPPollution",
+              "description": "The ads variable for the FPPollution flag",
+              "type": "CAN"
+            }
+          }
+        ]
+      }
+    ],
+    "operations": [
+      {
+        "operation": [
+          {
+            "$": {
+              "id": "1",
+              "name": "TCServiceInspectionReset",
+              "description": "Sending Service Reset from TiC"
+            }
+          },
+          {
+            "$": {
+              "id": "2",
+              "name": "TCFireMarchalReset",
+              "description": "Sending Fire Marshall Reset from TiC"
+            }
+          },
+          {
+            "$": {
+              "id": "4",
+              "name": "TCMaintenanceModeEnter",
+              "description": "Sending Enter Maintenance mode from TiC"
+            }
+          },
+          {
+            "$": {
+              "id": "8",
+              "name": "TCMaintenanceModeLeave",
+              "description": "Sending Leave Maintenance mode from TiC"
+            }
+          },
+          {
+            "$": {
+              "id": "16",
+              "name": "TCSilenceAlarms",
+              "description": "Sending Silence Alarms from TiC"
+            }
+          },
+          {
+            "$": {
+              "id": "32",
+              "name": "AckGas",
+              "description": "Sending Ack Gas Replacement from TiC"
+            }
+          },
+          {
+            "$": {
+              "id": "64",
+              "name": "TCCommissionedReset",
+              "description": "Sending Reset Commissioning from TiC"
+            }
+          },
+          {
+            "$": {
+              "id": "128",
+              "name": "SendServiceCommand",
+              "description": "Sends a service command to the PLC"
+            },
+            "parameter": [
+              {
+                "$": {
+                  "id": "Target",
+                  "description": "The system service identifier that is target of the command.",
+                  "type": "int"
+                }
+              },
+              {
+                "$": {
+                  "id": "Command",
+                  "description": "The command to send to the service",
+                  "type": "int"
+                }
+              },
+              {
+                "$": {
+                  "id": "Parameter1",
+                  "description": "First parameter to send to target",
+                  "type": "int"
+                }
+              },
+              {
+                "$": {
+                  "id": "Parameter2",
+                  "description": "Second parameter to send to target",
+                  "type": "int"
+                }
+              }
+            ]
+          },
+          {
+            "$": {
+              "id": "129",
+              "name": "ServiceCommandDisableSensor",
+              "description": "Disable sensor #SensorId#"
+            },
+            "parameter": [
+              {
+                "$": {
+                  "id": "SensorId",
+                  "description": "Id of sensor to be disabled",
+                  "type": "int"
+                }
+              }
+            ]
+          },
+          {
+            "$": {
+              "id": "130",
+              "name": "ServiceCommandToggleDisableSensor",
+              "description": "Toggle Enable/Disable #SensorId#"
+            },
+            "parameter": [
+              {
+                "$": {
+                  "id": "SensorId",
+                  "description": "Id of target sensor",
+                  "type": "int"
+                }
+              }
+            ]
+          },
+          {
+            "$": {
+              "id": "131",
+              "name": "ServiceCommandSetHeatTripValue",
+              "description": "Set Direct Heat Trip Value of #SensorId# to #Value# degrees celcius"
+            },
+            "parameter": [
+              {
+                "$": {
+                  "id": "SensorId",
+                  "description": "Id of target sensor",
+                  "type": "int"
+                }
+              },
+              {
+                "$": {
+                  "id": "Value",
+                  "description": "New Direct Heat Trip Value (celcius)",
+                  "type": "int"
+                }
+              }
+            ]
+          },
+          {
+            "$": {
+              "id": "132",
+              "name": "ServiceCommandClear",
+              "description": "Clear service command."
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+<div *ngIf="leveltestplan">
+    <h2>{{leveltestplan.name}} details!</h2>
+
+    <table>
+        <tr>
+            <th>id: </th>
+            <th>{{leveltestplan.id}}</th>
+        </tr>
+        <tr>
+            <th>name:</th>
+            <th><input [(ngModel)]="leveltestplan.name" placeholder="name"></th>
+        </tr>
+        <tr>
+            <th>description:</th>
+            <th><input [(ngModel)]="leveltestplan.description" placeholder="description"></th>
+        </tr>
+        <tr>
+            <th>goal:</th>
+            <th><input [(ngModel)]="leveltestplan.purpose" placeholder="purpose"></th>
+        </tr>
+        <tr>
+            <th>time:</th>
+            <th><input [(ngModel)]="leveltestplan.loop" placeholder="loop"><label>s</label></th>
+        </tr>
+    </table>
+
+    <button (click)="save()">Save</button>
+
+    <div *ngIf="testprocedures">
+        <label>test procedures</label>
+        <test-procedure [testprocedures]="testprocedures"></test-procedure>
+    </div>-->
+    <button (click)="goBack()">Back</button>
+</div>

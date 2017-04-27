@@ -1,0 +1,9 @@
+{
+    "levelTestPlan": {
+        "name": "aLevelTestPlanExample",
+        "description": "",
+        "purpose": "",
+        "loop": 1,
+        "testProcedures": []
+    }
+}

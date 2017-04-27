@@ -1,0 +1,42 @@
+\NeedsTeXFormat{LaTeX2e}[1995/12/01]
+\ProvidesPackage{frontpage}[2003/12/12 v0.1 LaTeX package (AAU title page)]
+\RequirePackage{ifthen}
+
+\makeatletter
+\renewcommand{\title}{none}
+\newcommand{\groupname}{none}
+\newcommand{\subtitle}{none}
+\newcommand{\titleimage}{none}
+\newcommand{\semester}{none}
+
+\newcommand{\ifnotnone}[2]{\ifthenelse{\not \equal{#1}{none}}{#2}{}}
+\makeatother
+
+\newcommand{\fancyfront}{
+\thispagestyle{empty}
+\begin{nopagebreak}
+  \vspace*{1cm}
+  \begin{center}
+    \hrule height 2pt
+    \vspace{4mm}
+      {\Huge \textbf{\ifnotnone{\title}{\title}}}
+    
+    \vspace{4mm}
+    \hrule height 2pt
+    {\ifnotnone{\subtitle}{\parbox{10cm}{\centering \vspace{8mm}\itshape\textbf{\subtitle}}}}
+    
+    \vspace{\stretch{1}}
+
+    \ifnotnone{\titleimage}{\includegraphics{\titleimage}}
+
+    \vspace{\stretch{1}}
+
+    {\small Department of Control Engineering\\ {\semester}th Semester \\ \scshape Aalborg University \the\year}
+    
+  \end{center}
+\end{nopagebreak}
+\newpage
+}
+
+
+\endinput

@@ -1,0 +1,823 @@
+{
+    "adsTarget": {
+        "pollRate": "1m",
+        "verbose": 0,
+        "host": "192.168.0.1",
+        "port": 48898,
+        "amsNetIdTarget": "10.1.36.23.1.1",
+        "amsNetIdSource": "192.168.2.61.1.1",
+        "amsPortTarget": 851,
+        "amsPortSource": 33150
+    },
+    "Global_Variables": {
+        "tmdStorageBool": {
+            "indexOffset": "0x103778",
+            "bytelength": [
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                },
+                {
+                    "length": 1,
+                    "name": "BOOL"
+                }
+            ],
+            "propname": [
+                "clockToggle",
+                "g_stStatus.stTraverseStatus.bSensorError",
+                "g_stStatus.stImpactStatus.bSensorError",
+                "blank1",
+                "ALARM_Damper1MagnetTempHigh",
+                "ALARM_Damper1RailTempHigh",
+                "ALARM_Damper1AmbientTempHigh",
+                "blank2",
+                "EmergencyStop.DI_IMPACT_EmergencyButton_Active",
+                "EmergencyStop.DI_Door_Locked",
+                "blank3",
+                "EmergencyStop.DI_TRAVERSE_EmergencyButton_Active",
+                "blank4",
+                "EmergencyStop.MainHPUCabinet",
+                "EmergencyStop.atImpact",
+                "EmergencyStop.atTravers",
+                "EmergencyStop.atMainDoorToArea",
+                "EmergencyStop.atOffice",
+                "EmergencyStop.DoorSwitchFrontDoor",
+                "EmergencyStop.DoorSwitchBackDoor",
+                "EmergencyStop.ResetLamp",
+                "EmergencyStop.EDMMotorContact",
+                "EmergencyStop.IODirectSafetyReady",
+                "HPU.DI_HPU_Level_Ok",
+                "HPU.DI_HPU_Temp_Warning",
+                "HPU.DI_HPU_Temp_Alarm",
+                "HPU.DI_HPU_Return_Filter_Alarm",
+                "HPU.DI_HPU_Cooling_Start",
+                "HPU.DI_HPU_Cool_Filter_Alarm",
+                "HPU.DI_HPU_Supply_Filter_Alarm",
+                "HPU.DI_HPU_Pump_SoftStarter_Error",
+                "ALARM_HPUSupplyPressureHigh",
+                "HPU.DO_HPU_Dump_Valve_AtPump",
+                "ALARM_HPULevelSwitch",
+                "ALARM_HPUOilTempWarning",
+                "ALARM_HPUOilTempHigh",
+                "ALARM_HPUFilterReturn",
+                "HPU.DO_HPU_Cool_Fan_Run",
+                "ALARM_HPUFilterSupply",
+                "ALARM_HPUSoftStarter",
+                "HPU.DO_HPU_Pump_Run",
+                "HPU.DO_HPU_Cool_Pump_Run",
+                "HPU.DO_HPU_Reset_Lamp",
+                "HPU.DO_HPU_Heat_Run",
+                "LARM_HPUSensor",
+                "g_stStatus.stTraverseStatus.bError_AI_Cyl_A_Press_Bar",
+                "g_stStatus.stTraverseStatus.bError_AI_Cyl_B_Press_Bar",
+                "g_stStatus.stTraverseStatus.bError_AI_Valve_Fbk_Pct",
+                "g_stStatus.stTraverseStatus.bError_SSI_Cyl_Pos_Mm",
+                "g_stStatus.stImpactStatus.bError_AI_Cyl_A_Press_Bar",
+                "g_stStatus.stImpactStatus.bError_AI_Cyl_B_Press_Bar",
+                "g_stStatus.stImpactStatus.bError_AI_Valve_Fbk_Pct",
+                "g_stStatus.stImpactStatus.bError_SSI_Cyl_Pos_Mm",
+                "ALARM_Brake1_LS",
+                "ALARM_Brake1_Filter",
+                "ALARM_Brake1_TT",
+                "ALARM_Brake1_PT_PowerPack",
+                "ALARM_Brake1_PT_ServiceBrake",
+                "ALARM_Brake1_PT_DropPendulum",
+                "ALARM_Brake1_PT_RemoteBrake",
+                "ALARM_Brake1_PT_Cyl1_Supply",
+                "ALARM_Brake1_PT_Cyl1_Aside",
+                "ALARM_Brake1_PT_Cyl2_Supply",
+                "ALARM_Brake1_PT_Cyl2_Aside",
+                "ALARM_Brake1_Timeout",
+                "Brake.fbBrake1.DO_PumpRun",
+                "Brake.fbBrake1.DO_DumpValveOn",
+                "Brake.fbBrake1.DO_RemoteBrakeOn",
+                "ALARM_Brake2_LS",
+                "ALARM_Brake2_Filter",
+                "ALARM_Brake2_TT",
+                "ALARM_Brake2_PT_PowerPack",
+                "ALARM_Brake2_PT_ServiceBrake",
+                "ALARM_Brake2_PT_DropPendulum",
+                "ALARM_Brake2_PT_RemoteBrake",
+                "ALARM_Brake2_PT_Cyl1_Supply",
+                "ALARM_Brake2_PT_Cyl1_Aside",
+                "ALARM_Brake2_PT_Cyl2_Supply",
+                "ALARM_Brake2_PT_Cyl2_Aside",
+                "ALARM_Brake2_Timeout",
+                "Brake.fbBrake2.DO_PumpRun",
+                "Brake.fbBrake2.DO_DumpValveOn",
+                "Brake.fbBrake2.DO_RemoteBrakeOn"
+            ]
+        },
+        "tmdStorageReal": {
+            "indexOffset": "0x1037cc",
+            "bytelength": [
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                },
+                {
+                    "length": 4,
+                    "name": "REAL"
+                }
+            ],
+            "propname": [
+                "tbd1",
+                "sampleCount",
+                "blank5",
+                "g_stStatus.rHPUSupplyPressure",
+                "g_stStatus.rHPUReturnPressureMeasured",
+                "g_stStatus.stTraverseStatus.rPortAPressure",
+                "g_stStatus.stTraverseStatus.rPortBPressure",
+                "g_stStatus.stTraverseStatus.rActualPosition",
+                "g_stStatus.stTraverseStatus.rCommandValvePosition",
+                "g_stStatus.stTraverseStatus.rActualValvePosition",
+                "g_stStatus.stImpactStatus.rPortAPressure",
+                "g_stStatus.stImpactStatus.rPortBPressure",
+                "g_stStatus.stImpactStatus.rActualPosition",
+                "g_stStatus.stImpactStatus.rCommandValvePosition",
+                "g_stStatus.stImpactStatus.rActualValvePosition",
+                "g_stStatus.rFrameAccelerationX",
+                "g_stStatus.rFrameAccelerationY",
+                "g_stStatus.rFrameAccelerationZ",
+                "g_stStatus.rFrameAcc_Length",
+                "g_stStatus.rFrameAcc_LengthMax",
+                "g_stStatus.rPendulumAccelerationX",
+                "g_stStatus.rPendulumAccelerationY",
+                "g_stStatus.rPendulumAccelerationZ",
+                "g_stStatus.rPendulumAcc_Length",
+                "g_stStatus.rPendulumAcc_LengthMax",
+                "g_stStatus.stImpactStatus.rValveLineariationIn",
+                "g_stTraversTestStatus.eTestState",
+                "g_stTraversTestStatus.udiCyclesRampUpRemaining",
+                "g_stTraversTestStatus.udiCyclesTestRemaining",
+                "g_stTraversTestStatus.udiCyclesRampDownRemaining",
+                "g_stTraversTestStatus.rActualAmplitude",
+                "g_stTraversTestStatus.rWantedPosition",
+                "g_stTraversTestStatus.rFeedForwardAdd",
+                "g_stStatus.stTraverseStatus.rRawPosition",
+                "g_stStatus.stTraverseStatus.rActualForce",
+                "g_stImpactTestStatus.eTestState",
+                "g_stImpactTestStatus.udiCyclesTestRemaining",
+                "g_stImpactTestStatus.udiCyclesTestRemaining",
+                "g_stImpactTestStatus.rWantedVelocity",
+                "g_stImpactTestStatus.rFeedForwardAdd",
+                "g_stStatus.stImpactStatus.rRawPosition",
+                "g_stStatus.stImpactStatus.rActualForce",
+                "g_stStatus.rPendulumPositionRaw",
+                "g_stCommand.rImpactManualSpeed",
+                "g_stStatus.eHPUState",
+                "g_stStatus.stTraverseStatus.rActualVelocity",
+                "g_stStatus.stImpactStatus.rActualVelocity",
+                "g_stStatus.rPendulumMeanVelocity",
+                "g_stImpactTestStatus.rTargetSpeedMod",
+                "g_stImpactTestStatus.rGravityAddForce",
+                "g_stImpactTestStatus.rWantedForce",
+                "g_stImpactTestStatus.rVelocityAtImpact",
+                "g_stImpactTestStatus.rWantedForceRampDown",
+                "Damper.rDamper1MagnetTemp",
+                "Damper.rDamper1RailTemp",
+                "Damper.rDamper1AmbientTemp",
+                "Brake.fbBrake1.eState",
+                "Brake.fbBrake1.AI_TT_Res_degC.rActualValue",
+                "Brake.fbBrake1.AI_PT_PowerPack_Bar.rActualValue",
+                "Brake.fbBrake1.AI_PT_ServiceBrake_Bar.rActualValue",
+                "Brake.fbBrake1.AI_PT_DropPendulum_Bar.rActualValue",
+                "Brake.fbBrake1.AI_PT_RemoteBrake_Bar.rActualValue",
+                "Brake.fbBrake1.AI_PT_Cyl1_Supply_Bar.rActualValue",
+                "Brake.fbBrake1.AI_PT_Cyl1_Aside_Bar.rActualValue",
+                "Brake.fbBrake1.AI_PT_Cyl2_Supply_Bar.rActualValue",
+                "Brake.fbBrake1.AI_PT_Cyl2_Aside_Bar.rActualValue",
+                "Brake.fbBrake2.eState",
+                "Brake.fbBrake2.AI_TT_Res_degC.rActualValue",
+                "Brake.fbBrake2.AI_PT_PowerPack_Bar.rActualValue",
+                "Brake.fbBrake2.AI_PT_ServiceBrake_Bar.rActualValue",
+                "Brake.fbBrake2.AI_PT_DropPendulum_Bar.rActualValue",
+                "Brake.fbBrake2.AI_PT_RemoteBrake_Bar.rActualValue",
+                "Brake.fbBrake2.AI_PT_Cyl1_Supply_Bar.rActualValue",
+                "Brake.fbBrake2.AI_PT_Cyl1_Aside_Bar.rActualValue",
+                "Brake.fbBrake2.AI_PT_Cyl2_Supply_Bar.rActualValue",
+                "Brake.fbBrake2.AI_PT_Cyl2_Aside_Bar.rActualValue"
+            ]
+        }
+    }
+}

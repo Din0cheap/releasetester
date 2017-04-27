@@ -1,0 +1,10 @@
+<div id="search-component">
+    <h4>Master testplan search</h4>
+    <input #searchBox id="search-box" (keyup)="search(searchBox.value)"  placeholder="🔎"/>
+    <div>
+        <div *ngFor="let mastertestplan of mastertestplans | async"
+         (click)="gotoDetail(mastertestplan)" class="search-result">
+            {{mastertestplan.name}}
+        </div>
+    </div>
+</div>
